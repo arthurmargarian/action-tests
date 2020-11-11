@@ -1,4 +1,4 @@
-name: Build Prod after merge
+name: Build Prod on merge request
 on:
   pull_request:
     branches: [prod]
