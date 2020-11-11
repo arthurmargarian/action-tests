@@ -1,4 +1,4 @@
-name: reviewdog
+name: Review Bot
 on: [pull_request]
 jobs:
   reviewdog:
