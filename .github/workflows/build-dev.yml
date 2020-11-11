@@ -1,19 +1,17 @@
-name: build_dev_on_merge
+name: devBuild
 
 on:
-  
-  pull_request:
+  push:
    branches: [ dev ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node_version: ${{ matrix.node-version }}
       - name: Run build
-        run: npm start build
-
+      - run: npm ci
+      - run: npm build
