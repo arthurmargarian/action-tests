@@ -2,8 +2,10 @@ name: reviewdog
 on:
   push:
     branches:
-      - prod
+      - dev
   pull_request:
+    branches:
+      - prod
 jobs:
   shellcheck:
     name: runner / shellcheck
